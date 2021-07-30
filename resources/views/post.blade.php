@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/app.css">
 </head>
 <body>
- <artticle>
-       <?= $post ?>
-</artticle>   
+
+ <article>
+   <?=$post ?>
+</article>
+
 <a href="/">Go Back</a>
 </body>
 </html>

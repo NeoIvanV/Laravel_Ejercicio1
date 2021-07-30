@@ -20,14 +20,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('posts');
 });
-Route::get('/post/{post}', function ($slug) {
-    //dump and die
-   // dd($slug);
 
+Route::get('/post/{post}', function ($slug) {
+
+  $path = __DIR__ . "/../resources/posts/$slug.html";
+
+ if(!file_exists($path)){
+     //abort(404)
+     return redirect('/');
+ }
+
+ //return(__DIR__);
+ //dd($slug);
+ return view('post', [
+    
+    //'post' => file_get_contents($path),
+    'post' => file_get_contents(__DIR__ . "/../resources/posts/$slug.html"),
+ ]);
+
+ })->where('post', '[A-Za-z\_-]+');
+ 
+
+   //dump and die
+   // dd($slug);
    //dump and die an ddebug
    // ddd($slug);
-    return view('post', [
-    'post' => file_get_contents(__DIR__ . "/../resources/posts/$slug.html"),
-    ]);
-})->where('post', '[A-Za-z\_-]+');
-//});
+

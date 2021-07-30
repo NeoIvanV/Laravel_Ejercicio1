@@ -9,7 +9,7 @@
 </head>
 <body>
     <article>
-    <h1><a href="/post">My First Post</a></h1>
+    <h1><a href="/post/my-first-post">My First Post</a></h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo praesentium eius ab reprehenderit inventore eveniet porro, veritatis reiciendis iusto itaque, commodi eligendi. Aliquid consectetur ab qui nulla obcaecati accusantium laborum.</p>
     </article>
 
